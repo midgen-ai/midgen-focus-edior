@@ -1,0 +1,95 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build-desktop:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          npm install
+          cd electron && npm install
+
+      - name: Build Web (Expo)
+        run: npm run prebuild
+
+      - name: Copy Web Build to Electron (Windows)
+        if: runner.os == 'Windows'
+        run: xcopy dist electron\dist /E /I /Y
+
+      - name: Copy Web Build to Electron (Mac/Linux)
+        if: runner.os != 'Windows'
+        run: cp -r dist electron/dist
+
+      - name: Build Desktop (Windows)
+        if: runner.os == 'Windows'
+        run: cd electron && npx electron-builder --win --publish never
+
+      - name: Build Desktop (Linux)
+        if: runner.os == 'Linux'
+        run: cd electron && npx electron-builder --linux --publish never
+
+      - name: Build Desktop (Mac)
+        if: runner.os == 'macOS'
+        run: cd electron && npx electron-builder --mac --publish never
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: desktop-artifacts-${{ matrix.os }}
+          path: electron/dist-electron/**/*
+
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Prebuild Android
+        run: npx expo prebuild --platform android --no-install
+
+      - name: Build Android APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleRelease
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-apk
+          path: android/app/build/outputs/apk/release/app-release-unsigned.apk
