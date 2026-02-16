@@ -1,0 +1,296 @@
+
+> focus-editor-mobile@1.0.0 build:win
+> npm run prebuild && xcopy dist electron\dist /E /I /Y && cd electron && npx electron-builder --win
+
+
+> focus-editor-mobile@1.0.0 prebuild
+> npx expo export -p web
+
+Starting Metro Bundler
+Web .\index.js ΓûôΓûôΓûôΓûôΓûôΓûôΓûôΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæΓûæ 44.0% ( 187/1923)
+Web Bundled 2672ms index.js (2166 modules)
+
+ΓÇ║ Assets (34):
+assets\audio\bonfire.c9eb867980e0f5bf49f72d10f4f88001.mp3 (1.05 MB)
+assets\audio\forest.764d69470b0d5f83468afee44088f2aa.mp3 (1.64 MB)
+assets\audio\leaves.06f239984abe78f7b76709f648ea6ff2.mp3 (1.93 MB)
+assets\audio\rain.c64852b8311545e7a2b790c5e19663dc.mp3 (3.48 MB)
+assets\audio\seaside.c74eeba907fe51166d3d01b51374fc01.mp3 (1.03 MB)
+assets\audio\thunder.b5f8f1543d810bc2fb111378b1c90a6d.mp3 (354 kB)
+assets\audio\water.6c7022d491a2edf47fe356bb05aa2bf0.mp3 (869 kB)
+assets\audio\wind.fbd42b60f9dc5c0615deb46f7cf7ae59.mp3 (609 kB)
+assets\midgen-logo.c90bca046b45408f43cb85b3b32b9096.png (85.9 kB)
+node_modules\@expo-google-fonts\bricolage-grotesque\200ExtraLight\BricolageGrotesque_200ExtraLight.0e66297d36d7f24484f3ec8a2232d6fc.ttf (91.1 kB)
+node_modules\@expo-google-fonts\bricolage-grotesque\300Light\BricolageGrotesque_300Light.a1f1439e622b6998c9b639bbf0a23f01.ttf (90.9 kB)
+node_modules\@expo-google-fonts\bricolage-grotesque\400Regular\BricolageGrotesque_400Regular.6586800789b30b19bbaeb349ca5d240a.ttf (90.9 kB)
+node_modules\@expo-google-fonts\bricolage-grotesque\500Medium\BricolageGrotesque_500Medium.1363130c7bdf956d164cb7e605619849.ttf (91 kB)
+node_modules\@expo-google-fonts\bricolage-grotesque\600SemiBold\BricolageGrotesque_600SemiBold.e5b5fc505484ff3ca24da73cba67c660.ttf (91 kB)
+node_modules\@expo-google-fonts\bricolage-grotesque\700Bold\BricolageGrotesque_700Bold.2f7de7a336f650f9cee5ed919cc3b003.ttf (91 kB)
+node_modules\@expo-google-fonts\bricolage-grotesque\800ExtraBold\BricolageGrotesque_800ExtraBold.5bfb4fa1f8907c768231d97bc27e8df9.ttf (91.1 kB)
+node_modules\@expo-google-fonts\inter\100Thin_Italic\Inter_100Thin_Italic.1b97f7df9b976cfe530c18c09598e6f6.ttf (347 kB)
+node_modules\@expo-google-fonts\inter\100Thin\Inter_100Thin.ddbb1cd55ad509e82377bd10beed6506.ttf (343 kB)
+node_modules\@expo-google-fonts\inter\200ExtraLight_Italic\Inter_200ExtraLight_Italic.3d0662838915a7a16d01c262735d3d29.ttf (347 kB)
+node_modules\@expo-google-fonts\inter\200ExtraLight\Inter_200ExtraLight.e1f33daee21eb5998b13d3e05264d9a3.ttf (343 kB)
+node_modules\@expo-google-fonts\inter\300Light_Italic\Inter_300Light_Italic.17f8f23a2852bfa14ce5bf590c2a0e2c.ttf (347 kB)
+node_modules\@expo-google-fonts\inter\300Light\Inter_300Light.d2994e3dea3856e1834395ad6cce32af.ttf (343 kB)
+node_modules\@expo-google-fonts\inter\400Regular_Italic\Inter_400Regular_Italic.36cad9f97595b7759264b945d64502b4.ttf (346 kB)
+node_modules\@expo-google-fonts\inter\400Regular\Inter_400Regular.51b6ad87261f18b6433ec52871ddfabc.ttf (342 kB)
+node_modules\@expo-google-fonts\inter\500Medium_Italic\Inter_500Medium_Italic.155406bfbfb023eb104728edfe62c0e9.ttf (346 kB)
+node_modules\@expo-google-fonts\inter\500Medium\Inter_500Medium.137ab18bace28dd0bd83eb3b8ed2bc54.ttf (343 kB)
+node_modules\@expo-google-fonts\inter\600SemiBold_Italic\Inter_600SemiBold_Italic.a349d1ac188e1a67689432f44de99849.ttf (347 kB)
+node_modules\@expo-google-fonts\inter\600SemiBold\Inter_600SemiBold.a5f35888d2da465de352e0dcfaf33324.ttf (344 kB)
+node_modules\@expo-google-fonts\inter\700Bold_Italic\Inter_700Bold_Italic.3398006c80026f0508aaaf4808950d56.ttf (348 kB)
+node_modules\@expo-google-fonts\inter\700Bold\Inter_700Bold.6e237de4f1f413afa2fcc45c77ac343a.ttf (344 kB)
+node_modules\@expo-google-fonts\inter\800ExtraBold_Italic\Inter_800ExtraBold_Italic.7ca909a56537d965feef41abe58b87e0.ttf (349 kB)
+node_modules\@expo-google-fonts\inter\800ExtraBold\Inter_800ExtraBold.6016034293c084aa0c056e83938bf1cc.ttf (345 kB)
+node_modules\@expo-google-fonts\inter\900Black_Italic\Inter_900Black_Italic.d5f78c24de59ce5e4bad405e10e71941.ttf (349 kB)
+node_modules\@expo-google-fonts\inter\900Black\Inter_900Black.bcec6eda9700a81ba92c483a2f2c02c1.ttf (345 kB)
+
+ΓÇ║ web bundles (1):
+_expo/static/js/web/index-231c550a259d41c8cf8ef4d5c5c06b33.js (4.02 MB)
+
+ΓÇ║ Files (3):
+favicon.ico (14.5 kB)
+index.html (1.22 kB)
+metadata.json (49 B)
+
+Exported: dist
+dist\favicon.ico
+dist\index.html
+dist\metadata.json
+dist\assets\assets\midgen-logo.c90bca046b45408f43cb85b3b32b9096.png
+dist\assets\assets\audio\bonfire.c9eb867980e0f5bf49f72d10f4f88001.mp3
+dist\assets\assets\audio\forest.764d69470b0d5f83468afee44088f2aa.mp3
+dist\assets\assets\audio\leaves.06f239984abe78f7b76709f648ea6ff2.mp3
+dist\assets\assets\audio\rain.c64852b8311545e7a2b790c5e19663dc.mp3
+dist\assets\assets\audio\seaside.c74eeba907fe51166d3d01b51374fc01.mp3
+dist\assets\assets\audio\thunder.b5f8f1543d810bc2fb111378b1c90a6d.mp3
+dist\assets\assets\audio\water.6c7022d491a2edf47fe356bb05aa2bf0.mp3
+dist\assets\assets\audio\wind.fbd42b60f9dc5c0615deb46f7cf7ae59.mp3
+dist\assets\node_modules\@expo-google-fonts\bricolage-grotesque\200ExtraLight\BricolageGrotesque_200ExtraLight.0e66297d36d7f24484f3ec8a2232d6fc.ttf
+dist\assets\node_modules\@expo-google-fonts\bricolage-grotesque\300Light\BricolageGrotesque_300Light.a1f1439e622b6998c9b639bbf0a23f01.ttf
+dist\assets\node_modules\@expo-google-fonts\bricolage-grotesque\400Regular\BricolageGrotesque_400Regular.6586800789b30b19bbaeb349ca5d240a.ttf
+dist\assets\node_modules\@expo-google-fonts\bricolage-grotesque\500Medium\BricolageGrotesque_500Medium.1363130c7bdf956d164cb7e605619849.ttf
+dist\assets\node_modules\@expo-google-fonts\bricolage-grotesque\600SemiBold\BricolageGrotesque_600SemiBold.e5b5fc505484ff3ca24da73cba67c660.ttf
+dist\assets\node_modules\@expo-google-fonts\bricolage-grotesque\700Bold\BricolageGrotesque_700Bold.2f7de7a336f650f9cee5ed919cc3b003.ttf
+dist\assets\node_modules\@expo-google-fonts\bricolage-grotesque\800ExtraBold\BricolageGrotesque_800ExtraBold.5bfb4fa1f8907c768231d97bc27e8df9.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\100Thin\Inter_100Thin.ddbb1cd55ad509e82377bd10beed6506.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\100Thin_Italic\Inter_100Thin_Italic.1b97f7df9b976cfe530c18c09598e6f6.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\200ExtraLight\Inter_200ExtraLight.e1f33daee21eb5998b13d3e05264d9a3.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\200ExtraLight_Italic\Inter_200ExtraLight_Italic.3d0662838915a7a16d01c262735d3d29.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\300Light\Inter_300Light.d2994e3dea3856e1834395ad6cce32af.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\300Light_Italic\Inter_300Light_Italic.17f8f23a2852bfa14ce5bf590c2a0e2c.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\400Regular\Inter_400Regular.51b6ad87261f18b6433ec52871ddfabc.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\400Regular_Italic\Inter_400Regular_Italic.36cad9f97595b7759264b945d64502b4.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\500Medium\Inter_500Medium.137ab18bace28dd0bd83eb3b8ed2bc54.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\500Medium_Italic\Inter_500Medium_Italic.155406bfbfb023eb104728edfe62c0e9.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\600SemiBold\Inter_600SemiBold.a5f35888d2da465de352e0dcfaf33324.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\600SemiBold_Italic\Inter_600SemiBold_Italic.a349d1ac188e1a67689432f44de99849.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\700Bold\Inter_700Bold.6e237de4f1f413afa2fcc45c77ac343a.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\700Bold_Italic\Inter_700Bold_Italic.3398006c80026f0508aaaf4808950d56.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\800ExtraBold\Inter_800ExtraBold.6016034293c084aa0c056e83938bf1cc.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\800ExtraBold_Italic\Inter_800ExtraBold_Italic.7ca909a56537d965feef41abe58b87e0.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\900Black\Inter_900Black.bcec6eda9700a81ba92c483a2f2c02c1.ttf
+dist\assets\node_modules\@expo-google-fonts\inter\900Black_Italic\Inter_900Black_Italic.d5f78c24de59ce5e4bad405e10e71941.ttf
+dist\_expo\static\js\web\index-231c550a259d41c8cf8ef4d5c5c06b33.js
+38 File(s) copied
+  ΓÇó electron-builder  version=24.13.3 os=10.0.26200
+  ΓÇó loaded configuration  file=package.json ("build" field)
+  ΓÇó effective config  config=directories:
+  output: ../dist-electron
+  buildResources: build
+appId: com.midgen.focuseditor
+productName: Focus Editor
+files:
+  - filter:
+      - '**/*'
+      - dist/**/*
+npmRebuild: false
+extends: null
+
+  ΓÇó skipped dependencies rebuild  reason=npmRebuild is set to false
+  ΓÇó packaging       platform=win32 arch=x64 electron=34.5.8 appOutDir=G:\midgen\midgen-focus-editor\dist-electron\win-unpacked
+  ΓÇó spawning        command=G:\midgen\midgen-focus-editor\node_modules\app-builder-bin\win\x64\app-builder.exe unpack-electron --configuration [{"platform":"win32","arch":"x64","version":"34.5.8"}] --output G:\midgen\midgen-focus-editor\dist-electron\win-unpacked --distMacOsAppName Electron.app
+  ΓÇó map async       taskCount=2
+  ΓÇó map async       taskCount=1
+  ΓÇó map async       taskCount=73
+  ΓÇó exited          command=app-builder.exe code=0 pid=15344
+  ΓÇó spawning        command=G:\midgen\midgen-focus-editor\node_modules\app-builder-bin\win\x64\app-builder.exe node-dep-tree --dir G:\midgen\midgen-focus-editor\electron
+  ΓÇó exited          command=app-builder.exe code=0 pid=7044 out=[]
+  ΓÇó getPublishConfigsForUpdateInfo: no publishConfigs, detect using repository info
+  ΓÇó spawning        command=G:\midgen\midgen-focus-editor\node_modules\app-builder-bin\win\x64\app-builder.exe icon --format ico --root G:\midgen\midgen-focus-editor\electron\build --root G:\midgen\midgen-focus-editor\electron --out G:\midgen\midgen-focus-editor\dist-electron\.icon-ico
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\build\icon.ico
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\icon.ico
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\build\icons
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\icons
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\build\icon.png
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\icon.png
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\build\icon.icns
+  ΓÇó path doesn't exist  path=G:\midgen\midgen-focus-editor\electron\icon.icns
+  ΓÇó no icons found, using provided fallback sources  
+  ΓÇó exited          command=app-builder.exe code=0 pid=17568 out={"icons":null,"isFallback":true}
+  ΓÇó default Electron icon is used  reason=application icon is not set
+  ΓÇó spawning        command=G:\midgen\midgen-focus-editor\node_modules\app-builder-bin\win\x64\app-builder.exe rcedit --args ["G:\\midgen\\midgen-focus-editor\\dist-electron\\win-unpacked\\Focus Editor.exe","--set-version-string","FileDescription","Focus Editor","--set-version-string","ProductName","Focus Editor","--set-version-string","LegalCopyright","Copyright ┬⌐ 2026 Midgen Software Labs","--set-file-version","1.0.0","--set-product-version","1.0.0.0","--set-version-string","InternalName","Focus Editor","--set-version-string","OriginalFilename","","--set-version-string","CompanyName","Midgen Software Labs"]
+  ΓÇó computing effective URL  initialUrl=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z
+                             currentUrl=https://release-assets.githubusercontent.com/github-production-release-asset/65527128/f73f2200-5d53-11ea-8264-ddd345f11ee4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-02-16T09%3A14%3A56Z&rscd=attachment%3B+filename%3DwinCodeSign-2.6.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-02-16T08%3A13%3A57Z&ske=2026-02-16T09%3A14%3A56Z&sks=b&skv=2018-11-09&sig=mj1B%2FBvyTmqoyKpT%2BHrinJC2hunFFO4Q90wzk9k2JfE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3MTIzMDA0OCwibmJmIjoxNzcxMjI5NzQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2yuTniv6r8N-B4Z4blDhGz5peRiNCBfpvxdB5aBLK5o&response-content-disposition=attachment%3B%20filename%3DwinCodeSign-2.6.0.7z&response-content-type=application%2Foctet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z length=5635384 contentType=application/octet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ΓÇó map async       taskCount=1
+  ΓÇó download part   range=bytes=0-5635383 index=0
+  ΓÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=2.83s
+  ΓÇó execute command  command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439'
+                     workingDirectory=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  Γ¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439.7z
+    --
+    Path = C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439\darwin\10.12\lib\libssl.dylib
+    
+                    command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\819383439'
+                    workingDir=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  ΓÇó exited          command=app-builder.exe code=2 pid=8256
+  ΓÇó Above command failed, retrying 3 more times
+  ΓÇó spawning        command=G:\midgen\midgen-focus-editor\node_modules\app-builder-bin\win\x64\app-builder.exe rcedit --args ["G:\\midgen\\midgen-focus-editor\\dist-electron\\win-unpacked\\Focus Editor.exe","--set-version-string","FileDescription","Focus Editor","--set-version-string","ProductName","Focus Editor","--set-version-string","LegalCopyright","Copyright ┬⌐ 2026 Midgen Software Labs","--set-file-version","1.0.0","--set-product-version","1.0.0.0","--set-version-string","InternalName","Focus Editor","--set-version-string","OriginalFilename","","--set-version-string","CompanyName","Midgen Software Labs"]
+  ΓÇó computing effective URL  initialUrl=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z
+                             currentUrl=https://release-assets.githubusercontent.com/github-production-release-asset/65527128/f73f2200-5d53-11ea-8264-ddd345f11ee4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-02-16T09%3A14%3A56Z&rscd=attachment%3B+filename%3DwinCodeSign-2.6.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-02-16T08%3A13%3A57Z&ske=2026-02-16T09%3A14%3A56Z&sks=b&skv=2018-11-09&sig=mj1B%2FBvyTmqoyKpT%2BHrinJC2hunFFO4Q90wzk9k2JfE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3MTIzMDA0OCwibmJmIjoxNzcxMjI5NzQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2yuTniv6r8N-B4Z4blDhGz5peRiNCBfpvxdB5aBLK5o&response-content-disposition=attachment%3B%20filename%3DwinCodeSign-2.6.0.7z&response-content-type=application%2Foctet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z length=5635384 contentType=application/octet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ΓÇó map async       taskCount=1
+  ΓÇó download part   range=bytes=0-5635383 index=0
+  ΓÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=2.103s
+  ΓÇó execute command  command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135'
+                     workingDirectory=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  Γ¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135.7z
+    --
+    Path = C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135\darwin\10.12\lib\libssl.dylib
+    
+                    command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\757388135'
+                    workingDir=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  ΓÇó exited          command=app-builder.exe code=2 pid=6412
+  ΓÇó Above command failed, retrying 2 more times
+  ΓÇó spawning        command=G:\midgen\midgen-focus-editor\node_modules\app-builder-bin\win\x64\app-builder.exe rcedit --args ["G:\\midgen\\midgen-focus-editor\\dist-electron\\win-unpacked\\Focus Editor.exe","--set-version-string","FileDescription","Focus Editor","--set-version-string","ProductName","Focus Editor","--set-version-string","LegalCopyright","Copyright ┬⌐ 2026 Midgen Software Labs","--set-file-version","1.0.0","--set-product-version","1.0.0.0","--set-version-string","InternalName","Focus Editor","--set-version-string","OriginalFilename","","--set-version-string","CompanyName","Midgen Software Labs"]
+  ΓÇó computing effective URL  initialUrl=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z
+                             currentUrl=https://release-assets.githubusercontent.com/github-production-release-asset/65527128/f73f2200-5d53-11ea-8264-ddd345f11ee4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-02-16T09%3A14%3A56Z&rscd=attachment%3B+filename%3DwinCodeSign-2.6.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-02-16T08%3A13%3A57Z&ske=2026-02-16T09%3A14%3A56Z&sks=b&skv=2018-11-09&sig=mj1B%2FBvyTmqoyKpT%2BHrinJC2hunFFO4Q90wzk9k2JfE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3MTIzMDA0OCwibmJmIjoxNzcxMjI5NzQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2yuTniv6r8N-B4Z4blDhGz5peRiNCBfpvxdB5aBLK5o&response-content-disposition=attachment%3B%20filename%3DwinCodeSign-2.6.0.7z&response-content-type=application%2Foctet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z length=5635384 contentType=application/octet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ΓÇó map async       taskCount=1
+  ΓÇó download part   range=bytes=0-5635383 index=0
+  ΓÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=6.563s
+  ΓÇó execute command  command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763'
+                     workingDirectory=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  Γ¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763.7z
+    --
+    Path = C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763\darwin\10.12\lib\libssl.dylib
+    
+                    command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\927194763'
+                    workingDir=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  ΓÇó exited          command=app-builder.exe code=2 pid=16816
+  ΓÇó Above command failed, retrying 1 more times
+  ΓÇó spawning        command=G:\midgen\midgen-focus-editor\node_modules\app-builder-bin\win\x64\app-builder.exe rcedit --args ["G:\\midgen\\midgen-focus-editor\\dist-electron\\win-unpacked\\Focus Editor.exe","--set-version-string","FileDescription","Focus Editor","--set-version-string","ProductName","Focus Editor","--set-version-string","LegalCopyright","Copyright ┬⌐ 2026 Midgen Software Labs","--set-file-version","1.0.0","--set-product-version","1.0.0.0","--set-version-string","InternalName","Focus Editor","--set-version-string","OriginalFilename","","--set-version-string","CompanyName","Midgen Software Labs"]
+  ΓÇó computing effective URL  initialUrl=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z
+                             currentUrl=https://release-assets.githubusercontent.com/github-production-release-asset/65527128/f73f2200-5d53-11ea-8264-ddd345f11ee4?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-02-16T09%3A14%3A56Z&rscd=attachment%3B+filename%3DwinCodeSign-2.6.0.7z&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-02-16T08%3A13%3A57Z&ske=2026-02-16T09%3A14%3A56Z&sks=b&skv=2018-11-09&sig=mj1B%2FBvyTmqoyKpT%2BHrinJC2hunFFO4Q90wzk9k2JfE%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc3MTIzMDA0OCwibmJmIjoxNzcxMjI5NzQ4LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.2yuTniv6r8N-B4Z4blDhGz5peRiNCBfpvxdB5aBLK5o&response-content-disposition=attachment%3B%20filename%3DwinCodeSign-2.6.0.7z&response-content-type=application%2Foctet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z length=5635384 contentType=application/octet-stream
+  ΓÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ΓÇó map async       taskCount=1
+  ΓÇó download part   range=bytes=0-5635383 index=0
+  ΓÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=3.116s
+  ΓÇó execute command  command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383'
+                     workingDirectory=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  Γ¿» cannot execute  cause=exit status 2
+                    out=
+    7-Zip (a) 21.07 (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-12-26
+    
+    Scanning the drive for archives:
+    1 file, 5635384 bytes (5504 KiB)
+    
+    Extracting archive: C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383.7z
+    --
+    Path = C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383.7z
+    Type = 7z
+    Physical Size = 5635384
+    Headers Size = 1492
+    Method = LZMA2:24m LZMA:20 BCJ2
+    Solid = +
+    Blocks = 2
+    
+    
+    Sub items Errors: 2
+    
+    Archives with Errors: 1
+    
+    Sub items Errors: 2
+    
+                    errorOut=ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383\darwin\10.12\lib\libcrypto.dylib
+    ERROR: Cannot create symbolic link : A required privilege is not held by the client. : C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383\darwin\10.12\lib\libssl.dylib
+    
+                    command='G:\midgen\midgen-focus-editor\node_modules\7zip-bin\win\x64\7za.exe' x -bd 'C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383.7z' '-oC:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign\197409383'
+                    workingDir=C:\Users\mdabu\AppData\Local\electron-builder\Cache\winCodeSign
+  ΓÇó exited          command=app-builder.exe code=2 pid=9840
+  ΓÇó Above command failed, retrying 0 more times

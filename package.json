@@ -1,0 +1,76 @@
+{
+  "name": "focus-editor-mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "electron": "electron electron/main.js",
+    "electron:dev": "concurrently \"npx expo start --web --port 8083\" \"wait-on tcp:8083 && set ELECTRON_START_URL=http://localhost:8083 && electron electron/main.js\"",
+    "prebuild": "npx expo export -p web",
+    "build:win": "npm run prebuild && xcopy dist electron\\dist /E /I /Y && cd electron && npx electron-builder --win",
+    "build:mac": "npm run prebuild && cp -r dist electron/dist && cd electron && npx electron-builder --mac",
+    "build:linux": "npm run prebuild && cp -r dist electron/dist && cd electron && npx electron-builder --linux"
+  },
+  "build": {
+    "appId": "com.midgen.focuseditor",
+    "productName": "Midgen Focus Editor",
+    "directories": {
+      "output": "dist-electron",
+      "app": "electron"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      {
+        "from": "../dist",
+        "to": "dist",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "npmRebuild": false,
+    "extends": null
+  },
+  "dependencies": {
+    "@expo-google-fonts/bricolage-grotesque": "^0.4.1",
+    "@expo-google-fonts/inter": "^0.4.2",
+    "@expo/metro-runtime": "~6.1.2",
+    "@lottiefiles/dotlottie-react": "^0.13.5",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-native-community/slider": "5.0.1",
+    "expo": "~54.0.33",
+    "expo-av": "~16.0.8",
+    "expo-clipboard": "~8.0.8",
+    "expo-linear-gradient": "^15.0.8",
+    "expo-linking": "^8.0.11",
+    "expo-sharing": "~14.0.8",
+    "expo-splash-screen": "~31.0.13",
+    "expo-status-bar": "~3.0.9",
+    "lottie-react-native": "^7.3.6",
+    "lucide-react-native": "^0.564.0",
+    "lz-string": "^1.5.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-markdown-display": "^7.0.2",
+    "react-native-reanimated": "~4.1.1",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-svg": "^15.12.1",
+    "react-native-web": "^0.21.0",
+    "react-native-webview": "13.15.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-native": "^0.72.8",
+    "concurrently": "^9.2.1",
+    "electron": "^40.4.1",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.9.3",
+    "wait-on": "^9.0.4"
+  }
+}

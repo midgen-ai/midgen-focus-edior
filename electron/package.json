@@ -1,0 +1,23 @@
+{
+  "name": "focus-editor-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Midgen Software Labs",
+  "description": "Focus Editor Desktop App",
+  "build": {
+    "appId": "com.midgen.focuseditor",
+    "productName": "Focus Editor",
+    "directories": {
+      "output": "../dist-electron"
+    },
+    "files": [
+      "**/*",
+      "dist/**/*"
+    ],
+    "npmRebuild": false,
+    "extends": null
+  },
+  "devDependencies": {
+    "electron": "^34.1.1"
+  }
+}
