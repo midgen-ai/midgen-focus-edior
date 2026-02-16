@@ -3,8 +3,13 @@ name: Build and Release
 on:
   push:
     branches: [main, master]
+    tags:
+      - "v*"
   pull_request:
     branches: [main, master]
+
+permissions:
+  contents: write
 
 jobs:
   build-desktop:
@@ -56,6 +61,20 @@ jobs:
           name: desktop-artifacts-${{ matrix.os }}
           path: electron/dist-electron/**/*
 
+      - name: Release Desktop Artifacts
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            electron/dist-electron/*.exe
+            electron/dist-electron/*.dmg
+            electron/dist-electron/*.zip
+            electron/dist-electron/*.AppImage
+            electron/dist-electron/*.snap
+            electron/dist-electron/*.deb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build-android:
     runs-on: ubuntu-latest
     steps:
@@ -93,3 +112,11 @@ jobs:
         with:
           name: android-apk
           path: android/app/build/outputs/apk/release/app-release-unsigned.apk
+
+      - name: Release Android APK
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: android/app/build/outputs/apk/release/app-release-unsigned.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
