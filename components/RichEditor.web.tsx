@@ -109,20 +109,80 @@ export const RichEditor = forwardRef<RichEditorRef, RichEditorProps>(({ themeId,
                 {`
                 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;600&display=swap');
                 
+    // Set default content to H1 if empty
+    useEffect(() => {
+        if (editorRef.current && (!initialContent || initialContent === '<br>')) {
+             // Only set if strictly empty or just a break, and no internal update pending
+             if (!internalUpdate.current) {
+                editorRef.current.innerHTML = '<h1><br></h1>';
+             }
+        }
+    }, []);
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+        if (e.key === 'Enter') {
+            const selection = window.getSelection();
+            if (!selection || selection.rangeCount === 0) return;
+
+            const anchorNode = selection.anchorNode;
+            const parentBlock = anchorNode?.parentElement?.closest('h1, h2, h3, h4, h5, h6, p, div');
+            
+            if (parentBlock && /^H[1-6]$/.test(parentBlock.tagName)) {
+                // If inside a heading, prevents default handling usually duplicating the header
+                // and explicitly inserts a paragraph
+                e.preventDefault();
+                document.execCommand('insertParagraph', false);
+                document.execCommand('formatBlock', false, 'P');
+            }
+        }
+    };
+
+    const handleInput = (e: React.FormEvent<HTMLDivElement>) => {
+        const newContent = e.currentTarget.innerHTML;
+        internalUpdate.current = true;
+        onChange(newContent);
+        // We might want to check if it became empty and restore H1, 
+        // but user might intentionally delete everything.
+    };
+
+    useEffect(() => {
+        const handleSelectionChange = () => {
+            checkSelection();
+        };
+        document.addEventListener('selectionchange', handleSelectionChange);
+        return () => {
+            document.removeEventListener('selectionchange', handleSelectionChange);
+        };
+    }, []);
+
+    const preventBlur = (e: any) => {
+        e.preventDefault();
+    };
+
+    return (
+        <View style={[styles.container, { backgroundColor: theme.bg }]}>
+            <style>
+                {`
+                @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@400;600&display=swap');
+
                 [contenteditable]:empty:before {
-                    content: 'Just write...';
-                    color: ${theme.text}40;
-                    display: block; /* For Firefox */
+                    content: 'Title...';
+                color: ${theme.text}40;
+                display: block;
+                font-size: 1.6em;
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-weight: 600;
+                margin-top: 1.25em;
                 }
-                
+
                 #web-editor h1, #web-editor h2, #web-editor h3 {
-                    font-family: 'Bricolage Grotesque', sans-serif;
-                    font-weight: 600;
-                    margin-top: 1.25em;
-                    margin-bottom: 0.5em;
-                    line-height: 1.3;
+                    font - family: 'Bricolage Grotesque', sans-serif;
+                font-weight: 600;
+                margin-top: 1.25em;
+                margin-bottom: 0.5em;
+                line-height: 1.3;
                 }
-                #web-editor h1 { font-size: 1.6em; }
+                #web-editor h1 {font - size: 1.6em; }
                 `}
             </style>
             <div
@@ -131,6 +191,7 @@ export const RichEditor = forwardRef<RichEditorRef, RichEditorProps>(({ themeId,
                 contentEditable={!isReadingMode}
                 suppressContentEditableWarning
                 onInput={handleInput}
+                onKeyDown={handleKeyDown}
                 style={{
                     flex: 1,
                     outline: 'none',
@@ -149,9 +210,6 @@ export const RichEditor = forwardRef<RichEditorRef, RichEditorProps>(({ themeId,
             />
             {/* Floating Tooltip Toolbar */}
             {toolbarVisible && toolbarPosition && (
-                // We use a Portal or absolute positioning relative to window if possible, but here we are inside a View.
-                // If the View is flex:1 and takes full screen, absolute coordinates should work if we subtract offsets?
-                // `rect` gives viewport coordinates.
                 <View style={[
                     styles.floatingToolbar,
                     {
@@ -161,17 +219,33 @@ export const RichEditor = forwardRef<RichEditorRef, RichEditorProps>(({ themeId,
                         borderColor: theme.text + '20'
                     }
                 ]}>
-                    <TouchableOpacity onPress={() => document.execCommand('formatBlock', false, 'H1')} style={styles.toolbarBtn}>
+                    <TouchableOpacity
+                        onPress={() => document.execCommand('formatBlock', false, 'H1')}
+                        style={styles.toolbarBtn}
+                        onMouseDown={preventBlur} // Critical for Web
+                    >
                         <Text style={{ color: theme.text, fontWeight: 'bold' }}>H1</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => document.execCommand('formatBlock', false, 'P')} style={styles.toolbarBtn}>
+                    <TouchableOpacity
+                        onPress={() => document.execCommand('formatBlock', false, 'P')}
+                        style={styles.toolbarBtn}
+                        onMouseDown={preventBlur}
+                    >
                         <Text style={{ color: theme.text }}>P</Text>
                     </TouchableOpacity>
                     <View style={{ width: 1, height: 20, backgroundColor: theme.text + '20' }} />
-                    <TouchableOpacity onPress={() => document.execCommand('bold', false)} style={styles.toolbarBtn}>
+                    <TouchableOpacity
+                        onPress={() => document.execCommand('bold', false)}
+                        style={styles.toolbarBtn}
+                        onMouseDown={preventBlur}
+                    >
                         <Text style={{ color: theme.text, fontWeight: 'bold' }}>B</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={() => document.execCommand('italic', false)} style={styles.toolbarBtn}>
+                    <TouchableOpacity
+                        onPress={() => document.execCommand('italic', false)}
+                        style={styles.toolbarBtn}
+                        onMouseDown={preventBlur}
+                    >
                         <Text style={{ color: theme.text, fontStyle: 'italic' }}>I</Text>
                     </TouchableOpacity>
                 </View>
@@ -200,8 +274,12 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 5,
         zIndex: 1000,
+        cursor: 'pointer', // Ensure cursor indicates clickable
+        userSelect: 'none', // Prevent selection of toolbar text
     },
     toolbarBtn: {
         paddingHorizontal: 10,
+        paddingVertical: 5,
+        cursor: 'pointer',
     }
 });
